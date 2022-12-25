@@ -34,3 +34,41 @@ A typical performance measure for classification problems is the Area under the 
 It is a graph showing the performance of a classification model at all classification thresholds. This curve plots two parameters:
 - True Positive Rate
 - False Positive Rate
+
+
+
+# Conclusion:
+
+- Home credit can quite rely on this model as a **secondary option** for now as it needs further enhancements.
+- Home credit should consider these advices before lending money to applicants.
+    - Beware when contract type is **revolving** as a larger amount of Revolving loans,                                       comparing with their frequency, are **not repaid**.
+    - **Widowed** have the **most repayment rate** so there should be more assurance when lending them.
+    - Should focus on applicants with **no children & (1: 2 children)** as they are most frequent                                                     and with **highest repayment rate**.
+    - **Shouldn’t** lend to applicants with **9** and **12** children as **100%** of them **don't repay**.
+    - Pay attention when someone **isn't working** or on maturity leave as **40%** of them **doesn’t pay back**.
+
+------------
+# Next steps
+## For EDA .
+- Explore the bereau dataset.
+    - Merge the application_train and bureau on ID column
+    - Explore these features (Credit status, Credit currency, Credit type, Duration of credit, Credit overdue 'CREDIT_DAY_OVERDUE', Credit sum 'AMT_CREDIT_SUM')
+    - Remove the outliers from AMT_CREDIT_SUM and better plot the distribution.
+- Explore the Previous application data 
+    - Plot these features ( Contract type, Cash loan purpose, Contract status, Payment type,Client type)
+
+## For Feature engineering.
+- Develope new features from the categorical and numeric column from<br> (Previous_application, POS_CASH_BALANCE,Installments,Credit_card_balance) datasets.
+- Then merge the to application data (Train & test)
+- Evaluate the model on these new features.
+
+## For Dimentionality reduction.
+- Get important features from Randomforest
+- Select top features and evaluate.
+- If It preforms poorly i coud add more feature untill it gets better.
+
+## For Data Modeling
+- I want to try somoe Gradiant boosting algorithms like XGBoost, and LightGBM.
+- I think it will preform even better than Randomforest.
+-------
+Amir Helmy
